@@ -22,8 +22,9 @@ class NotebookSpider(scrapy.Spider):
                 "name" : product.css('a.poly-component__title::text').get(),
                 "reviews_rating": product.css('span.poly-reviews__rating::text').get(),
                 "reviews_count": product.css('span.poly-reviews__total::text').get(),
-                "price": prices[0] if len(prices) > 0 else None,
-                "price_discounted": prices[1] if len(prices) > 1 else None,
+                "old_price": prices[0] if len(prices) > 0 else None,
+                "new_price": prices[1] if len(prices) > 1 else None,
+                "source": response.url
             }
 
         if self.page_count < self.max_page:
@@ -31,5 +32,3 @@ class NotebookSpider(scrapy.Spider):
             if next_page:
                 self.page_count += 1
                 yield scrapy.Request(url=next_page, callback=self.parse)
-
-        
