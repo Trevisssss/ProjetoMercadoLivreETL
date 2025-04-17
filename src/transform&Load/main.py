@@ -75,8 +75,6 @@ choices = [
 
 notebook_data['reviews_count_category'] = np.select(conditions, choices, default='Indefinido')
 
-#print(notebook_data.tail(10))
-
 
 ### -------------- CONFIGURANDO O BANCO DE DADOS -------------- ###
 
@@ -167,3 +165,9 @@ cursor.executemany(sql_insert, data_tuples)
 
 # Ação ESSENCIAL: Salva permanentemente todas as inserções no banco
 conn.commit()
+
+#Fechando o cursor e a conexão
+cursor.close()
+conn.close()
+print("Conexão encerrada.")
+print(">>> ETL concluído com sucesso!")
