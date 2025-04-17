@@ -78,7 +78,7 @@ notebook_data['reviews_count_category'] = np.select(conditions, choices, default
 #print(notebook_data.tail(10))
 
 
-#CONFIGURANDO O BANCO DE DADOS
+### -------------- CONFIGURANDO O BANCO DE DADOS -------------- ###
 
 DRIVER = "ODBC Driver 18 for SQL Server"
 SERVER_NAME = "TREVIS"
@@ -148,3 +148,22 @@ else:
     cursor.execute(sql_create_table)
     conn.commit()
 
+columns_to_insert = ['brand', 'name', 'reviews_rating', 'reviews_count', 'old_price', 'new_price', 'source', 'created_at', 'discount', 'rating_category', 'reviews_count_category']
+
+# Gera a parte "[col1], [col2], ..." a partir da lista explícita
+colunas_sql = ', '.join([f'[{col}]' for col in columns_to_insert]) 
+
+# Gera a parte "?, ?, ..." com o número correto de placeholders
+placeholders_sql = ', '.join(['?'] * len(columns_to_insert))
+
+sql_insert = f"""INSERT INTO {SCHEMA_NAME}.{NOME_TABELA} ({colunas_sql}) VALUES ({placeholders_sql});"""
+
+print("Template SQL INSERT preparado.")
+
+data_tuples = [tuple(x) for x in notebook_data[columns_to_insert].astype(object).replace({pd.NA: None, np.nan: None}).values]
+
+# Executa o SQL de inserção para cada linha do DataFrame.
+cursor.executemany(sql_insert, data_tuples) 
+
+# Ação ESSENCIAL: Salva permanentemente todas as inserções no banco
+conn.commit()

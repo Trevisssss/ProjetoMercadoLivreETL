@@ -16,7 +16,9 @@ Este projeto tem como objetivo realizar a coleta de dados do site do Mercado Liv
 - **Bibliotecas**: 
     - `scrapy` para web scraping
     - `pandas` para manipulação de dados
-- **Banco de Dados**: MySQL ou PostgreSQL
+    - `numpy` para alguns cálculos e outras manipulações
+    - `pyodbc` para conexão com o banco de dados
+- **Banco de Dados**: SQL Server
 - **Ferramentas de ETL**: Scripts customizados em Python
 
 ## Estrutura do Projeto
@@ -39,3 +41,16 @@ ProjetoETL/
 │   └── test_etl.py      # Testes automatizados
 │
 └── README.md            # Documentação do projeto
+```
+
+## Desafios do Projeto
+
+Durante o desenvolvimento deste projeto, algumas dificuldades foram encontradas, como:
+
+- **Web Scraping com Scrapy**: Lidar com mudanças na estrutura do site do Mercado Livre e implementar estratégias para evitar bloqueios por parte do servidor. Essas dificuldades ajudaram a entender melhor como funcionam os mecanismos de scraping e a importância de respeitar as políticas de uso de sites. Além de ter que entender como funciona um html de forma com que eu pudesse encontrar os elementos que eram de interesse.
+
+- **Manipulação de Dados com Pandas e Numpy**: Garantir a consistência e a qualidade dos dados exigiu um bom entendimento de manipulação de dados, limpeza e tratamento de valores ausentes ou inconsistentes, pois o banco exige uma forma específica de comunicação e do tipo de dados aceitos. 
+
+- **Conexão com Banco de Dados usando PyODBC**: Configurar a conexão com o banco de dados SQL Server e otimizar a inserção de dados em massa foi um desafio técnico que proporcionou aprendizado sobre integração de sistemas e boas práticas de desempenho.
+
+- **Simulação de um Projeto Real**: A integração de diferentes etapas do processo ETL, desde a extração até o carregamento, simulou um fluxo de trabalho real, permitindo uma visão prática de como projetos de dados são estruturados e executados.
