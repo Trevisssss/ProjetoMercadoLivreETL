@@ -1,0 +1,21 @@
+table Medidas
+	lineageTag: 98a7092d-e3cc-44af-857b-c144b7373dd2
+
+	column Column1
+		dataType: string
+		lineageTag: 33bbcb96-6f1b-4833-b51f-db2a943d4d84
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Medidas = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t])
+				in
+				    Source
+
+	annotation PBI_ResultType = Table
+

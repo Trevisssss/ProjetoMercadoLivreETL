@@ -18,6 +18,7 @@ Este projeto tem como objetivo realizar a coleta de dados do site do Mercado Liv
     - `pandas` para manipulação de dados
     - `numpy` para alguns cálculos e outras manipulações
     - `pyodbc` para conexão com o banco de dados
+    - `python-dotenv` para conexão com o banco de dados
 - **Banco de Dados**: SQL Server
 - **Ferramentas de ETL**: Scripts customizados em Python
 
