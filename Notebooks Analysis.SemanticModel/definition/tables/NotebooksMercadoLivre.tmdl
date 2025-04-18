@@ -1,0 +1,132 @@
+table NotebooksMercadoLivre
+	lineageTag: bc52f4f3-80fa-4dfe-9a9b-89f2250caf20
+
+	column ID_PK
+		dataType: int64
+		formatString: 0
+		lineageTag: 273518c3-98de-4578-b8a5-be5c1e96dc92
+		summarizeBy: sum
+		sourceColumn: ID_PK
+
+		annotation SummarizationSetBy = Automatic
+
+	column brand
+		dataType: string
+		lineageTag: ee216468-0166-44fe-b51c-452d0d092216
+		summarizeBy: none
+		sourceColumn: brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: 39007cb6-9f79-4d78-99cc-e7b833d92ca5
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column reviews_rating
+		dataType: double
+		lineageTag: e3279084-6e08-4cd8-8270-ac615a27db1c
+		summarizeBy: sum
+		sourceColumn: reviews_rating
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column reviews_count
+		dataType: int64
+		formatString: 0
+		lineageTag: f4ab37dc-718d-4959-988f-5974b9351598
+		summarizeBy: sum
+		sourceColumn: reviews_count
+
+		annotation SummarizationSetBy = Automatic
+
+	column old_price
+		dataType: double
+		lineageTag: 5ac6c425-b32f-4efc-960b-daa37e54846a
+		summarizeBy: sum
+		sourceColumn: old_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column new_price
+		dataType: double
+		lineageTag: a27f5204-ed77-4ed2-b056-524b5fd72b4a
+		summarizeBy: sum
+		sourceColumn: new_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column source
+		dataType: string
+		lineageTag: 4ce4fbab-7317-47fb-a42c-029a2b0ce5ae
+		summarizeBy: none
+		sourceColumn: source
+
+		annotation SummarizationSetBy = Automatic
+
+	column created_at
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 6c28b05e-a0e5-4f22-847d-817f88c9d707
+		summarizeBy: none
+		sourceColumn: created_at
+
+		annotation SummarizationSetBy = Automatic
+
+	column discount
+		dataType: double
+		lineageTag: d64fbee0-4ca7-4b30-ba80-da5fb27636f1
+		summarizeBy: sum
+		sourceColumn: discount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column rating_category
+		dataType: string
+		lineageTag: 3a1e77df-2fa3-4490-bb39-6594d4f03380
+		summarizeBy: none
+		sourceColumn: rating_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column reviews_count_category
+		dataType: string
+		lineageTag: c321db6b-7e3a-451e-8835-87ba586a419c
+		summarizeBy: none
+		sourceColumn: reviews_count_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column LoadDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: cb18ccd1-1d91-44c4-ab66-e95f608cd12c
+		summarizeBy: none
+		sourceColumn: LoadDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition NotebooksMercadoLivre = m
+		mode: import
+		source =
+				let
+				    Fonte = Sql.Database("localhost", "MercadoLivreNotebooksDW"),
+				    dbo_NotebooksMercadoLivre = Fonte{[Schema="dbo",Item="NotebooksMercadoLivre"]}[Data]
+				in
+				    dbo_NotebooksMercadoLivre
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

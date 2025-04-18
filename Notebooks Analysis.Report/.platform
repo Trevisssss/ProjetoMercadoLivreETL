@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Notebooks Analysis"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d3a7db40-f67a-4cc1-ae85-35defaec288b"
+  }
+}

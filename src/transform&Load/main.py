@@ -2,9 +2,16 @@ import pandas as pd
 import numpy as np
 import datetime
 import pyodbc
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
+
+
+# # --- 1. Lendo o arquivo JSONL e configurando o DataFrame ---
 pd.options.display.max_columns = None
-notebook_data = pd.read_json("data\data.json")
+JSON_FOLDER_PATH = os.environ.get("JSON_FOLDER_PATH")
+notebook_data = pd.read_json(JSON_FOLDER_PATH, lines=True)
 
 #Adicionar a hora da extração/transformação
 notebook_data['created_at'] = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -78,11 +85,11 @@ notebook_data['reviews_count_category'] = np.select(conditions, choices, default
 
 ### -------------- CONFIGURANDO O BANCO DE DADOS -------------- ###
 
-DRIVER = "ODBC Driver 18 for SQL Server"
-SERVER_NAME = "TREVIS"
-DATABASE_NAME = "MercadoLivreNotebooksDW"
-UID = "ETL_USER"
-PWD = "0y3Ysr3ICZYNcMZgTvjd"
+DRIVER = os.environ.get("DB_DRIVER")
+SERVER_NAME = os.environ.get("DB_SERVER")
+DATABASE_NAME = os.environ.get("DB_DATABASE")
+UID = os.environ.get("DB_UID")
+PWD = os.environ.get("DB_PWD")
 
 # # --- Tentativa de Conexão Direta ---
 # # Se esta linha falhar, o script vai quebrar aqui com um erro.
@@ -95,8 +102,9 @@ print("\n>>> Sucesso! A linha pyodbc.connect() foi executada sem erro aparente."
 cursor = conn.cursor()
 print("Cursor criado.")
 
-NOME_TABELA = 'NotebooksMercadoLivre'
-SCHEMA_NAME = 'dbo'            
+NOME_TABELA = os.environ.get("NOME_TABELA")
+SCHEMA_NAME = os.environ.get("SCHEMA_NAME")
+print(f"Schema: {SCHEMA_NAME} | Tabela: {NOME_TABELA}")    
 
 # # --- 2. SQL para Verificar a Existência da Tabela ---
 # # Usamos OBJECT_ID para pegar o ID da tabela. Retorna NULL se não existir.
@@ -105,7 +113,6 @@ sql_check_table = f"SELECT OBJECT_ID(N'{SCHEMA_NAME}.{NOME_TABELA}', N'U');"
 table_object_id = None
 
 #Checando a existência da tabela.
-
 # 1. Executa a consulta SQL que está em sql_check_table
 cursor.execute(sql_check_table)
 table_object_id = cursor.fetchone()
