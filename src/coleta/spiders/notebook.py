@@ -7,7 +7,7 @@ class NotebookSpider(scrapy.Spider):
     start_urls = ["https://lista.mercadolivre.com.br/notebooks#D[A:notebook]"]
     
     page_count = 1 # Initialize page count to 1
-    max_page = 10 # Set the maximum number of pages to scrape
+    max_page = 20 # Set the maximum number of pages to scrape
 
     def parse(self, response):
         
