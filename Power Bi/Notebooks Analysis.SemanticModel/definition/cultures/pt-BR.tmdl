@@ -2,8 +2,3017 @@ cultureInfo pt-BR
 
 	linguisticMetadata =
 			{
-			  "Version": "1.0.0",
-			  "Language": "en-US"
+			  "Version": "3.5.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "notebooks_mercado_livre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "NotebooksMercadoLivre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "notebooks mercado livre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "notebook mercado livre": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "NotebooksMercadoLivre": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre.id_pk": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "NotebooksMercadoLivre",
+			          "ConceptualProperty": "ID_PK"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id pk": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ID_PK": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "pk": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "identification pk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity pk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier pk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential pk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre.brand": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "NotebooksMercadoLivre",
+			          "ConceptualProperty": "Marca"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "brand": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "product": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "variety": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "marque": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "make": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "trademark": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "style": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "strain": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "Marca": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre.name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "NotebooksMercadoLivre",
+			          "ConceptualProperty": "Nome do Produto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "notebooks_mercado_livre.reviews_rating": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "NotebooksMercadoLivre",
+			          "ConceptualProperty": "reviews_rating"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reviews rating": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "review rating": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "reviews_rating": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "rating": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "review assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "review evaluation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "evaluation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "review score": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "review grade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "review ranking": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "review mark": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "score": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "grade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre.reviews_count": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "NotebooksMercadoLivre",
+			          "ConceptualProperty": "Quantidade de Reviews"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reviews count": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "review count": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "reviews_count": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "review amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre.old_price": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "NotebooksMercadoLivre",
+			          "ConceptualProperty": "old_price"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "old price": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "old_price": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "price": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "old value": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "old worth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "old fee": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "old charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "old amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "old bill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "old rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "old expense": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "old cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "old outlay": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre.new_price": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "NotebooksMercadoLivre",
+			          "ConceptualProperty": "new_price"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "new price": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "new_price": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "price": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "new value": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "new worth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "new fee": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "new charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "new amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "new bill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "new rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "new expense": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "new cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "new outlay": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre.source": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "NotebooksMercadoLivre",
+			          "ConceptualProperty": "source"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "source": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "basis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "font": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "birthplace": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "foundation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "cause": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "spring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "cradle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "home": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "informant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "spokesperson": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre.created_at": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "NotebooksMercadoLivre",
+			          "ConceptualProperty": "created_at"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "created at": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "created_at": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "notebooks_mercado_livre.discount": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "NotebooksMercadoLivre",
+			          "ConceptualProperty": "discount"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "discount": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "reduction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "markdown": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "concession": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "deduction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "rebate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre.rating_category": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "NotebooksMercadoLivre",
+			          "ConceptualProperty": "Categoria Avaliação"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "rating category": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "rating_category": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "category": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "rating classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "rating class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "rating group": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "rating type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "rating grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "rating kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre.reviews_count_category": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "NotebooksMercadoLivre",
+			          "ConceptualProperty": "reviews_count_category"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "reviews count category": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "review count category": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "reviews_count_category": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "category": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "count category": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "review count classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "count classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "review count class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "review count group": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "review count type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "review count grouping": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "review count kind": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "classification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "count class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "count group": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre.load_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "NotebooksMercadoLivre",
+			          "ConceptualProperty": "LoadDate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "load date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "LoadDate": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "load moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "load period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "notebooks_mercado_livre.new_price_intervalos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "NotebooksMercadoLivre",
+			          "ConceptualProperty": "current_price (intervalos)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "new_price (intervalos)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "new_price (intervalo)": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "new_price": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "Preço Atual": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.quantidade_produtos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Quantidade de Produtos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quantidade produtos": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Quantidade de Produtos": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.quantidade_de_produtos_diferentes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Quantidade de Produtos Diferentes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quantidade de produtos diferentes": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.data_coleta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Data Coleta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data coleta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information coleta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact coleta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info coleta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic coleta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document coleta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure coleta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record coleta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "medida.qtd__produto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "% Qtd. Produto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% qtd. produto": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage qtd. produto": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct qtd. produto": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "medida.LABEL__qtd_produtos_marca": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "LABEL - Qtd Produtos Marca"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "LABEL - qtd produtos marca": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "LABEL qtd produtos marca": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "sticker - qtd produto marca": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "sticker qtd produto marca": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "tag - qtd produto marca": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "decal - qtd produto marca": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "tag qtd produto marca": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "decal qtd produto marca": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "name tag - qtd produto marca": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.503
+			          }
+			        },
+			        {
+			          "name tag qtd produto marca": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        }
+			      ]
+			    },
+			    "medida.AXIS_qtd_produtos_por_marca": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "AXIS Qtd Produtos por Marca"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "AXIS qtd produtos por marca": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.valor_agregador_por_marca": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Valor Total em Produtos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor agregador por marca": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.COLOR__max_price_distribution_color": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "COLOR - Max Price Distribution Color"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "COLOR - max price distribution color": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "COLOR max price distribution color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "distribution color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "price distribution color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "max price distribution color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "color maximum price distribution color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "maximum price distribution color": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "color max price distribution hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "max price distribution hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "price distribution hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "color max price distribution tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "color max price distribution shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "color max price distribution dye": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "color max price distribution paint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "color max price distribution pigment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        }
+			      ]
+			    },
+			    "medida.SUBTITULO_quantidade_de_produtos_por_marca": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "SUBTITULO Quantidade de Produtos por Marca"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SUBTITULO quantidade de produtos por marca": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.média_de_avaliação": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Média de Avaliação"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "média de avaliação": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.quantidade_de_anúncios_sem_reviews": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Quantidade de Anúncios sem Reviews"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quantidade de anúncios sem reviews": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quantidade de anúncio sem appraisal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "quantidade de anúncio sem evaluation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "quantidade de anúncio sem assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "quantidade de anúncio sem examination": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "quantidade de anúncio sem analysis": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "quantidade de anúncio sem criticism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "quantidade de anúncio sem journal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "quantidade de anúncio sem publication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "quantidade de anúncio sem periodical": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "quantidade de anúncio sem magazine": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        }
+			      ]
+			    },
+			    "medida.LABEL_reviews_por_marca": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "LABEL Reviews Por Marca"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "LABEL reviews por marca": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sticker review por marca": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "tag review por marca": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "decal review por marca": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "name tag review por marca": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        }
+			      ]
+			    },
+			    "medida.AXIS_avaliações_por_marca": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "AXIS Avaliações por Marca"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "AXIS avaliações por marca": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "notebooks_mercado_livre_has_medida_média_de_avaliação": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "medida.média_de_avaliação": {
+			          "Target": {
+			            "Entity": "medida.média_de_avaliação"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "medida.média_de_avaliação"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_média_de_avaliação"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_medida_SUBTITULO_quantidade_de_produtos_por_marca": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "medida.SUBTITULO_quantidade_de_produtos_por_marca": {
+			          "Target": {
+			            "Entity": "medida.SUBTITULO_quantidade_de_produtos_por_marca"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "medida.SUBTITULO_quantidade_de_produtos_por_marca"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_SUBTITULO_quantidade_de_produtos_por_marca"
+			        }
+			      ]
+			    },
+			    "medida_has_COLOR__max_price_distribution_color": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.COLOR__max_price_distribution_color": {
+			          "Target": {
+			            "Entity": "medida.COLOR__max_price_distribution_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.COLOR__max_price_distribution_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_COLOR__max_price_distribution_color"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_medida_valor_agregador_por_marca": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "medida.valor_agregador_por_marca": {
+			          "Target": {
+			            "Entity": "medida.valor_agregador_por_marca"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "medida.valor_agregador_por_marca"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_valor_agregador_por_marca"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_medida_AXIS_qtd_produtos_por_marca": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "medida.AXIS_qtd_produtos_por_marca": {
+			          "Target": {
+			            "Entity": "medida.AXIS_qtd_produtos_por_marca"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "medida.AXIS_qtd_produtos_por_marca"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_AXIS_qtd_produtos_por_marca"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_medida_LABEL__qtd_produtos_marca": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "medida.LABEL__qtd_produtos_marca": {
+			          "Target": {
+			            "Entity": "medida.LABEL__qtd_produtos_marca"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "medida.LABEL__qtd_produtos_marca"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_LABEL__qtd_produtos_marca"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_medida_qtd__produto": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "medida.qtd__produto": {
+			          "Target": {
+			            "Entity": "medida.qtd__produto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "medida.qtd__produto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have__qtd__produto"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_medida_data_coleta": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "medida.data_coleta": {
+			          "Target": {
+			            "Entity": "medida.data_coleta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "medida.data_coleta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_data_coleta"
+			        }
+			      ]
+			    },
+			    "medida_has_quantidade_de_produtos_diferentes": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.quantidade_de_produtos_diferentes": {
+			          "Target": {
+			            "Entity": "medida.quantidade_de_produtos_diferentes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.quantidade_de_produtos_diferentes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_quantidade_de_produtos_diferentes"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_medida_quantidade_produtos": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "medida.quantidade_produtos": {
+			          "Target": {
+			            "Entity": "medida.quantidade_produtos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "medida.quantidade_produtos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_quantidade_produtos"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_new_price_intervalos": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "notebooks_mercado_livre.new_price_intervalos": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre.new_price_intervalos"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "notebooks_mercado_livre.new_price_intervalos"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_new_price_intervalos"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_load_date": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "notebooks_mercado_livre.load_date": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre.load_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "notebooks_mercado_livre.load_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_load_dates"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_reviews_count_category": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "notebooks_mercado_livre.reviews_count_category": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre.reviews_count_category"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "notebooks_mercado_livre.reviews_count_category"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_reviews_count_categories"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_rating_category": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "notebooks_mercado_livre.rating_category": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre.rating_category"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "notebooks_mercado_livre.rating_category"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_rating_categories"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_discount": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "notebooks_mercado_livre.discount": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre.discount"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "notebooks_mercado_livre.discount"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_discounts"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_created_at": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "notebooks_mercado_livre.created_at": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre.created_at"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "notebooks_mercado_livre.created_at"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_created_at"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_source": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "notebooks_mercado_livre.source": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre.source"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "notebooks_mercado_livre.source"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_sources"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_new_price": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "notebooks_mercado_livre.new_price": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre.new_price"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "notebooks_mercado_livre.new_price"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_new_prices"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "notebooks_mercado_livre.new_price"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "new_price_indicates_how_expensive_notebooks_mercado_livres_are"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_old_price": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "notebooks_mercado_livre.old_price": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre.old_price"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "notebooks_mercado_livre.old_price"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_old_prices"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "notebooks_mercado_livre.old_price"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "old_price_indicates_how_expensive_notebooks_mercado_livres_are"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_reviews_count": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "notebooks_mercado_livre.reviews_count": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre.reviews_count"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "notebooks_mercado_livre.reviews_count"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_reviews_counts"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_reviews_rating": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "notebooks_mercado_livre.reviews_rating": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre.reviews_rating"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "notebooks_mercado_livre.reviews_rating"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_reviews_rating"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_name": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "notebooks_mercado_livre.name": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre.name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "notebooks_mercado_livre.name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_names"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Name": {
+			              "Role": "notebooks_mercado_livre.name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "names_are_names_IDs_of_notebooks_mercado_livres"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_brand": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "notebooks_mercado_livre.brand": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre.brand"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "notebooks_mercado_livre.brand"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_brands"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_id_pk": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "notebooks_mercado_livre.id_pk": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre.id_pk"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "notebooks_mercado_livre.id_pk"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_id_pk"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_is_loaded_on_load_date": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "notebooks_mercado_livre.load_date": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre.load_date"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "notebooks_mercado_livre.load_date"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "load": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "notebooks_mercado_livre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "notebooks_mercado_livres_are_loaded_on_load_dates"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_is_created_on_created_at": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "notebooks_mercado_livre.created_at": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre.created_at"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "notebooks_mercado_livre.created_at"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "create": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "notebooks_mercado_livre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "notebooks_mercado_livres_are_created_on_created_at"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_medida_quantidade_de_anúncios_sem_reviews": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "medida.quantidade_de_anúncios_sem_reviews": {
+			          "Target": {
+			            "Entity": "medida.quantidade_de_anúncios_sem_reviews"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "medida.quantidade_de_anúncios_sem_reviews"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_quantidade_de_anúncios_sem_reviews"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_medida_LABEL_reviews_por_marca": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "medida.LABEL_reviews_por_marca": {
+			          "Target": {
+			            "Entity": "medida.LABEL_reviews_por_marca"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "medida.LABEL_reviews_por_marca"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_LABEL_reviews_por_marca"
+			        }
+			      ]
+			    },
+			    "notebooks_mercado_livre_has_medida_AXIS_avaliações_por_marca": {
+			      "Binding": {
+			        "ConceptualEntity": "NotebooksMercadoLivre"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "notebooks_mercado_livre": {
+			          "Target": {
+			            "Entity": "notebooks_mercado_livre"
+			          }
+			        },
+			        "medida.AXIS_avaliações_por_marca": {
+			          "Target": {
+			            "Entity": "medida.AXIS_avaliações_por_marca"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "notebooks_mercado_livre"
+			            },
+			            "Object": {
+			              "Role": "medida.AXIS_avaliações_por_marca"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "notebooks_mercado_livres_have_AXIS_avaliações_por_marca"
+			        }
+			      ]
+			    }
+			  }
 			}
 		contentType: json
 

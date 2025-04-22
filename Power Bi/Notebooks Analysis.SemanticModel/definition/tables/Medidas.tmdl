@@ -1,21 +1,166 @@
 table Medidas
 	lineageTag: 98a7092d-e3cc-44af-857b-c144b7373dd2
 
-	column Column1
-		dataType: string
-		lineageTag: 33bbcb96-6f1b-4833-b51f-db2a943d4d84
-		summarizeBy: none
-		sourceColumn: Column1
+	measure 'Quantidade de Produtos' = COUNTROWS( NotebooksMercadoLivre )
+		formatString: 0
+		displayFolder: QTD.
+		lineageTag: d939552e-2667-4416-9f7c-2e729a01df3b
 
-		annotation SummarizationSetBy = Automatic
+	measure 'Quantidade de Produtos Diferentes' = DISTINCTCOUNTNOBLANK( NotebooksMercadoLivre[Nome do Produto] )
+		formatString: 0
+		displayFolder: QTD.
+		lineageTag: 17c5e481-fbbb-4db6-965b-74ef4abe01cd
+
+	measure 'Data Coleta' = MAX( NotebooksMercadoLivre[created_at] )
+		formatString: dd/mm/yyyy hh:nn:ss
+		displayFolder: DATA
+		lineageTag: ee73d98a-6079-4d17-a5ff-9a4a9a9de713
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	measure '% Qtd. Produto' = ```
+			
+			VAR vQtd = [Quantidade de Produtos]
+			VAR vAllProd = 
+			CALCULATE(
+			    [Quantidade de Produtos],
+			    ALL( NotebooksMercadoLivre[Marca] )
+			)
+			VAR Result = DIVIDE(vQtd, vAllProd )
+			RETURN Result
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: QTD.
+		lineageTag: 3612bab1-dc72-4357-bcd1-61d9c9dca536
+
+	measure 'LABEL - Qtd Produtos Marca' =
+			
+			VAR vqtd = [Quantidade de Produtos]
+			VAR pctg = FORMAT( [% Qtd. Produto], "percent", "pt-br" )
+			RETURN
+			vqtd & " (" & pctg & ")"
+		displayFolder: LABELS
+		lineageTag: f4f5a7a9-45eb-4d84-b974-3621846b8c14
+
+	measure 'AXIS Qtd Produtos por Marca' = ```
+			
+			VAR vMax = 
+			MAXX(
+			    ALL( NotebooksMercadoLivre[Marca] ),
+			    [Quantidade de Produtos]
+			)
+			VAR vDesloc = 1.2
+			VAR vResult = vMax * vDesloc
+			RETURN vResult
+			```
+		formatString: 0
+		displayFolder: AXIS
+		lineageTag: a76a5d07-ff0b-4272-a688-0b7446d05de8
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Valor Total em Produtos' = SUM ( NotebooksMercadoLivre[new_price] )
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: VALOR
+		lineageTag: 3625466a-4185-4d34-b205-f8255800f48b
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure 'COLOR - Max Price Distribution Color' = ```
+			
+			VAR vMax = MAXX(
+			    ALL( NotebooksMercadoLivre[current_price (intervalos)] ),
+			    [Quantidade de Produtos]
+			)
+			VAR ValorAtual = [Quantidade de Produtos]
+			
+			VAR Cond = 
+			SWITCH(
+			    TRUE(),
+			    ValorAtual = vMax, "#444b6e",
+			    "#d9d9d9"
+			)
+			RETURN Cond
+			```
+		displayFolder: COR
+		lineageTag: 861eef22-dc35-4327-919a-65a7c65cf601
+
+	measure 'SUBTITULO Quantidade de Produtos por Marca' = ```
+			
+			VAR AllProducts = 
+			CALCULATE( 
+			    COUNTROWS( NotebooksMercadoLivre ),
+			    ALL( NotebooksMercadoLivre[Marca] )
+			)
+			VAR Txt = "Presença de mercado por marca, de um total de " & FORMAT( AllProducts, "#,0", "pt-br" ) & " produtos."
+			RETURN Txt
+			```
+		displayFolder: SUBTITULO
+		lineageTag: c4a8fef3-351d-4dad-8875-82109bc6b50a
+
+	measure 'Média de Avaliação' =
+			
+			AVERAGE( NotebooksMercadoLivre[reviews_rating] )
+		displayFolder: MÉDIA
+		lineageTag: 374debed-c58d-4338-88ed-73e53fa20ccd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Quantidade de Anúncios sem Reviews' =
+			
+			CALCULATE(
+			    COUNTROWS( NotebooksMercadoLivre ),
+			    NotebooksMercadoLivre[Quantidade de Reviews] = 0
+			)
+		formatString: 0
+		displayFolder: QTD.
+		lineageTag: be28eb77-ca5c-41df-be3c-0f9db33290f5
+
+	measure 'LABEL Reviews Por Marca' = ```
+			
+			VAR vMedia = [Média de Avaliação]
+			VAR v0Reviews = [Quantidade de Anúncios sem Reviews]
+			VAR vTotalAnuncios = COUNTROWS( NotebooksMercadoLivre )
+			VAR vProporcao = DIVIDE( v0Reviews, vTotalAnuncios )
+			VAR Formato1 = 
+			FORMAT( vMedia, "0.0", "pt-br" ) & " | " & FORMAT( vTotalAnuncios, "#", "pt-br" ) & " | "  & FORMAT( v0Reviews, "#", "pt-br" )
+			VAR Formato2 = 
+			FORMAT( vMedia, "0.0", "pt-br" ) & " | " & FORMAT( vProporcao, "percent", "pt-br" )
+			RETURN Formato2
+			```
+		displayFolder: LABELS
+		lineageTag: fc8aa194-779f-4282-9cd2-dad0fa5eb964
+
+	measure 'AXIS Avaliações por Marca' = ```
+			
+			VAR vMAX = 
+			MAXX(
+			    ALL( NotebooksMercadoLivre[Marca] ),
+			    [Média de Avaliação]
+			)
+			VAR vDeslocamento = 1.2
+			RETURN
+			vMAX * vDeslocamento
+			```
+		formatString: 0
+		displayFolder: AXIS
+		lineageTag: 5de40d38-af4b-4078-b790-12c61b2cbe25
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Média de Preço Por Anúncio' = AVERAGE( NotebooksMercadoLivre[new_price] )
+		formatString: 0.00
+		displayFolder: MÉDIA
+		lineageTag: a8c16d18-bcb8-49de-9556-95ed5d3d6419
 
 	partition Medidas = m
 		mode: import
 		source =
 				let
-				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t])
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Removed Columns" = Table.RemoveColumns(Source,{"Column1"})
 				in
-				    Source
+				    #"Removed Columns"
 
 	annotation PBI_ResultType = Table
 

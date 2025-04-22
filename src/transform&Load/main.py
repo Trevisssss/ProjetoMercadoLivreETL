@@ -86,7 +86,9 @@ notebook_data['reviews_count_category'] = np.select(conditions, choices, default
 notebook_data = (
         notebook_data[(notebook_data['new_price'] >= 500) 
         & 
-        (notebook_data['new_price'] <= 10000)]
+        (notebook_data['new_price'] <= 10000) 
+        & 
+        (notebook_data['brand'].notnull())]
 )
 #Para explorar o DataFrame em um Notebook, se necessário.
 notebook_data.to_csv(os.environ.get("CSV_FOLDER_PATH"), index=False)

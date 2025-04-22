@@ -10,7 +10,7 @@
       "nodes": [
         {
           "location": {
-            "x": 0,
+            "x": 42,
             "y": 0
           },
           "nodeIndex": "NotebooksMercadoLivre",
@@ -23,8 +23,8 @@
         },
         {
           "location": {
-            "x": 284,
-            "y": 98
+            "x": 348,
+            "y": 0
           },
           "nodeIndex": "Medidas",
           "nodeLineageTag": "98a7092d-e3cc-44af-857b-c144b7373dd2",
