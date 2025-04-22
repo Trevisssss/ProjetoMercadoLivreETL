@@ -15,8 +15,7 @@ Este repositório demonstra práticas de web scraping, manipulação de dados co
     * Contagem de Avaliações (`reviews_count`)
     * Preço Antigo (`old_price`)
     * Preço Novo (`new_price`)
-    * Fonte (`source` - ex: Mercado Livre)
-    * Identificador Único do Anúncio (`AnuncioID` - ex: MLB-xxxxx) *(Nota: Ou o identificador que você está usando)*
+    * Fonte (`source`)
     * Data/Hora da Coleta (`created_at`)
     * *Persistência inicial dos dados brutos em formato JSON.*
 * **Transformação (Transform):** Processamento e enriquecimento dos dados utilizando [Pandas](https://pandas.pydata.org/) e [NumPy](https://numpy.org/):
