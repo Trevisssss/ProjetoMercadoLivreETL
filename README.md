@@ -25,9 +25,8 @@ Este repositório demonstra práticas de web scraping, manipulação de dados co
 * **Carga (Load):** Carregamento dos dados transformados em um banco de dados SQL Server:
     * Conexão segura utilizando `pyodbc` e gerenciamento de credenciais via arquivo `.env` e `python-dotenv`.
     * Criação idempotente da tabela de destino (`CREATE TABLE IF NOT EXISTS` via checagem `OBJECT_ID`) com esquema definido.
-    * Estratégia de carga **Append Only** (apenas `INSERT`) para manter o histórico completo das coletas.
     * Inserção eficiente em lote usando `cursor.executemany()`.
-    * Controle explícito de transações (`conn.commit()`, `conn.rollback()`).
+    * Controle explícito de transações (`conn.commit()`).
 * **(Opcional) Visualização:** Disponibilização dos dados para análise em ferramentas como Power BI, potencialmente utilizando uma View SQL (`vw_NotebooksAtuais`) para consultar apenas o estado mais recente de cada produto.
 
 ## Arquitetura e Fluxo de Dados
@@ -36,7 +35,7 @@ O projeto segue um fluxo ETL padrão:
 
 1.  **Fonte:** Páginas de resultados de busca no site Mercado Livre Brasil.
 2.  **Extração:** O script `notebook.py` (utilizando Scrapy) navega pelo site, coleta os dados brutos dos anúncios de notebooks e salva-os em arquivos JSON na pasta `data/`. *Justificativa: Salvar em JSON primeiro desacopla a extração (que pode falhar devido a bloqueios ou mudanças no site) das etapas seguintes.*
-3.  **Transformação:** O script `src/transform.py` lê os arquivos JSON, carrega os dados em um DataFrame Pandas, realiza a limpeza, calcula as novas colunas (`discount`, categorias, etc.) e prepara os dados no formato final. *Justificativa: Pandas oferece grande flexibilidade e poder para manipulação e análise de dados tabulares.*
+3.  **Transformação:** O script `main.py` lê os arquivos JSON, carrega os dados em um DataFrame Pandas, realiza a limpeza, calcula as novas colunas (`discount`, categorias, etc.) e prepara os dados no formato final. *Justificativa: Pandas oferece grande flexibilidade e poder para manipulação e análise de dados tabulares.*
 4.  **Carga:** O script conecta-se ao SQL Server usando `pyodbc` e `python-dotenv` para as credenciais. Ele garante que a tabela de destino exista (criando-a na primeira execução) e então insere os dados transformados do DataFrame em lote (`executemany`). *Justificativa: SQL Server provê armazenamento relacional robusto.
 5.  **Análise (Externa):** Ferramentas como Power BI podem se conectar diretamente à tabela SQL Server para criar visuais interativos e personalizados.
 
