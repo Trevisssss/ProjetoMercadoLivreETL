@@ -48,7 +48,7 @@ O projeto segue um fluxo ETL padrão:
 * **Conexão BD Python:** pyodbc
 * **Gerenciamento de Configuração:** python-dotenv (`.env`)
 * **Controle de Versão:** Git, GitHub
-* **Visualização (Exemplo):** Power BI
+* **Visualização:** Power BI
 
 ## Desafios Enfrentados e Soluções
 
