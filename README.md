@@ -58,7 +58,7 @@ Este projeto apresentou oportunidades valiosas de aprendizado através da resolu
     * **Solução:** Diagnosticado como um problema de certificado autoassinado não confiável pelo cliente. Resolvido adicionando o parâmetro `Encrypt='no'` à string de conexão para o ambiente de desenvolvimento, ciente das implicações de segurança em redes não confiáveis. *(Ou `TrustServerCertificate='yes'` se foi o caso)*.
 * **Desafio:** Assegurar o **gerenciamento seguro das credenciais** do banco de dados ao compartilhar o código no GitHub.
     * **Solução:** Implementado o uso de arquivo `.env` para armazenar as credenciais localmente, carregando-as no script via `python-dotenv`. O arquivo `.env` foi adicionado ao `.gitignore` para prevenir commits acidentais. Um arquivo `.env.example` foi criado como template.
-* **Desafio:** Tornar o script de carga **re-executável (idempotente)** sem falhar ao tentar criar uma tabela já existente.
+* **Desafio:** Tornar o script de carga **re-executável** sem falhar ao tentar criar uma tabela já existente.
     * **Solução:** Implementada uma verificação prévia usando `SELECT OBJECT_ID(...)` para executar o `CREATE TABLE` somente se a tabela não for encontrada.
 * **Desafio:** Inserir eficientemente um **grande volume de dados** do DataFrame no SQL Server.
     * **Solução:** Utilizado o método `cursor.executemany()` em vez de loops com `cursor.execute()`, preparando os dados como uma lista de tuplas para otimização da inserção em lote.
