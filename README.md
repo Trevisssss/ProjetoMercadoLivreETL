@@ -20,14 +20,14 @@ Este repositório demonstra práticas de web scraping, manipulação de dados co
     * *Persistência inicial dos dados brutos em formato JSON.*
 * **Transformação (Transform):** Processamento e enriquecimento dos dados utilizando [Pandas](https://pandas.pydata.org/) e [NumPy](https://numpy.org/):
     * Criação de Categoria de Avaliação (`rating_category` - ex: 'Excelente', 'Bom', 'Regular') usando `numpy.select` baseado em faixas de `reviews_rating`.
-    * Criação de Categoria de Volume de Reviews (`reviews_count_category` - ex: 'Contagem Alta', 'Média', 'Baixa') usando `numpy.select` e [método de quartis/magnitude - especifique qual usou].
+    * Criação de Categoria de Volume de Reviews (`reviews_count_category` - ex: 'Contagem Alta', 'Média', 'Baixa') usando `numpy.select` baseado no tamanho da `amostra` a partir de conceitos estatísticos de significância de amostra.
     * Tratamento de tipos de dados e valores ausentes (`NaN`/`NA` convertidos para `None`) para compatibilidade com SQL Server.
 * **Carga (Load):** Carregamento dos dados transformados em um banco de dados SQL Server:
     * Conexão segura utilizando `pyodbc` e gerenciamento de credenciais via arquivo `.env` e `python-dotenv`.
     * Criação idempotente da tabela de destino (`CREATE TABLE IF NOT EXISTS` via checagem `OBJECT_ID`) com esquema definido.
     * Inserção eficiente em lote usando `cursor.executemany()`.
     * Controle explícito de transações (`conn.commit()`).
-* **(Opcional) Visualização:** Disponibilização dos dados para análise em ferramentas como Power BI, potencialmente utilizando uma View SQL (`vw_NotebooksAtuais`) para consultar apenas o estado mais recente de cada produto.
+* **(Opcional) Visualização:** Disponibilização dos dados para análise em ferramentas como Power BI
 
 ## Arquitetura e Fluxo de Dados
 
