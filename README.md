@@ -41,14 +41,16 @@ O projeto segue um fluxo ETL padrão:
 
 ## Tecnologias Utilizadas
 
-* **Linguagem:** Python 3.13
-* **Web Scraping:** Scrapy
-* **Manipulação de Dados:** Pandas, NumPy
-* **Banco de Dados:** Microsoft SQL Server
-* **Conexão BD Python:** pyodbc
-* **Gerenciamento de Configuração:** python-dotenv (`.env`)
-* **Controle de Versão:** Git, GitHub
-* **Visualização:** Power BI
+Este projeto faz uso das seguintes tecnologias:
+
+* **Linguagem:** `` `Python 3.13` ``
+* **Web Scraping:** `` `Scrapy` ``
+* **Manipulação de Dados:** `` `Pandas` ``, `` `NumPy` ``
+* **Banco de Dados:** Microsoft `` `SQL Server` ``
+* **Conexão BD Python:** `` `pyodbc` ``
+* **Gerenciamento de Configuração:** `` `python-dotenv` `` (com arquivo `` `.env` ``)
+* **Controle de Versão:** `` `Git` ``, `` `GitHub` ``
+* **Visualização (Opcional):** `` `Power BI` ``
 
 ## Desafios Enfrentados e Soluções
 
