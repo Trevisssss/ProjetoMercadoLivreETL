@@ -44,7 +44,7 @@ O projeto segue um fluxo ETL padrão:
 
 ## Tecnologias Utilizadas
 
-* **Linguagem:** Python 3.x
+* **Linguagem:** Python 3.13
 * **Web Scraping:** Scrapy
 * **Manipulação de Dados:** Pandas, NumPy
 * **Banco de Dados:** Microsoft SQL Server
@@ -69,3 +69,33 @@ Este projeto apresentou oportunidades valiosas de aprendizado através da resolu
     * **Solução:** Utilizado o método `cursor.executemany()` em vez de loops com `cursor.execute()`, preparando os dados como uma lista de tuplas para otimização da inserção em lote.
 * **Desafio:** Garantir a **compatibilidade de tipos de dados e tratamento de nulos** entre Pandas e SQL Server.
     * **Solução:** Realizada a conversão explícita de valores ausentes (`NaN`, `pd.NA`) do Pandas para `None` usando `.astype(object).replace()` antes da inserção, garantindo o mapeamento correto para `NULL` no SQL. Tipos de dados SQL foram definidos cuidadosamente no `CREATE TABLE`.
+
+## Overview das Análises e Conclusões
+
+Após os dados terem sido coletados, e armazenados no banco, é hora de montar as análises que dirão para o negócio como sua marca está representada nesse determinado e-commerce!
+
+Para acessar o painel e navegar / filtrar entre os visuais: [Painel](https://app.powerbi.com/view?r=eyJrIjoiMzFiOTA2MmMtZjg1Ny00Y2VjLTk1MDUtYmJkY2YyZWFjMGQ2IiwidCI6ImIzYWUzNDliLThjZTktNDc2Yi05ZWJlLTY1Y2NhNzdlZDA4ZiJ9&pageName=ac0a8d6657b5358d32a5)
+
+Do total de 764 produtos, 27% representam a marca dell, ou seja, dentro do mercado livre especificamente, temos que a maior parte dos anúncios são da marca, deixando ela mais presente. Esse fato pode contribuir na escolha final do consumidor, visto que se ele já não tiver uma marca em mente, a probabilidade de ele escolher a marca é de 27% (maior do que as outras).
+
+Filtrando a marca DELL no primeiro visual, é possível identificar que boa parte dos anúncios da marca não possuem uma avaliação (69%). O que impacta e muito na confiabilidade do anunciante, mas não necessariamente do produto, ainda assim afetará a decisão da compra do produto.
+
+Essa marca em sí se econtra posicionada com maior parte dos produtos estando entre 1500 e 3500 reais, provavelmente notebooks custo benefício, o que faz sentido, pois é onde normalmente o público geral fará sua escolha baseado em um uso não exigente.
+
+### Próximos passos
+
+Após essa análise inicial, algumas perguntas foram respondidas, mas outras foram criadas, exigindo uma investigação mais profunda, como:
+
+* Quais são os fatores que levam a um produto não ter nenhuma avaliação (quase 70% no caso da DELL)? Pode ser o tempo de listagem, a popularidade do produto, a plataforma de venda, etc.
+
+* Como a distribuição de preços dos produtos DELL se compara com a distribuição de preços de outras marcas, como LENOVO ou ASUS, que têm uma quantidade similar de produtos? A análise atual só mostra a distribuição da DELL.
+
+* O alto percentual de anúncios sem avaliação para a DELL é comum no mercado, ou é algo específico dessa marca ou desse conjunto de dados? Comparar esse percentual com o de outras marcas seria interessante.
+
+
+<br><br><br>
+`Esse projeto foi um exemplo prático de como uma análise exploratória pode responder perguntas pontuais, ao mesmo tempo que nos leva a raciocínios mais profundos, tentando entender a causa-efeito dos números que estamos vendo.`
+<br><br><br><br>
+
+_Overview do Painel:_
+![Análises de Presença de Mercado](Dashboard-Overview.png)
