@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Este projeto implementa um pipeline ETL (Extract, Transform, Load) ponta a ponta, projetado para coletar dados de anúncios de notebooks do Mercado Livre Brasil, realizar transformações para enriquecimento e análise, e carregar os dados processados em um banco de dados SQL Server. O objetivo é criar um dataset histórico que permita o monitoramento de preços, avaliações, descontos e a presença de marcas na plataforma, servindo como base para análises e visualizações (ex: em Power BI).
+Este projeto implementa um pipeline ETL (Extract, Transform, Load) ponta a ponta, projetado para coletar dados de anúncios de notebooks do Mercado Livre Brasil, realizar transformações para enriquecimento e análise, e carregar os dados processados em um banco de dados SQL Server. O objetivo é criar um dataset que permita o monitoramento de preços, avaliações, descontos e a presença de marcas na plataforma, servindo como base para análises e visualizações (Nesse caso, no Power BI).
 
 Este repositório demonstra práticas de web scraping, manipulação de dados com Pandas, interação segura com banco de dados relacional usando pyodbc, gerenciamento de configuração e versionamento com Git.
 
@@ -15,32 +15,29 @@ Este repositório demonstra práticas de web scraping, manipulação de dados co
     * Contagem de Avaliações (`reviews_count`)
     * Preço Antigo (`old_price`)
     * Preço Novo (`new_price`)
-    * Fonte (`source` - ex: Mercado Livre)
-    * Identificador Único do Anúncio (`AnuncioID` - ex: MLB-xxxxx) *(Nota: Ou o identificador que você está usando)*
+    * Fonte (`source`)
     * Data/Hora da Coleta (`created_at`)
     * *Persistência inicial dos dados brutos em formato JSON.*
 * **Transformação (Transform):** Processamento e enriquecimento dos dados utilizando [Pandas](https://pandas.pydata.org/) e [NumPy](https://numpy.org/):
-    * Cálculo de Percentual de Desconto (`discount`).
     * Criação de Categoria de Avaliação (`rating_category` - ex: 'Excelente', 'Bom', 'Regular') usando `numpy.select` baseado em faixas de `reviews_rating`.
-    * Criação de Categoria de Volume de Reviews (`reviews_count_category` - ex: 'Contagem Alta', 'Média', 'Baixa') usando `numpy.select` e [método de quartis/magnitude - especifique qual usou].
+    * Criação de Categoria de Volume de Reviews (`reviews_count_category` - ex: 'Contagem Alta', 'Média', 'Baixa') usando `numpy.select` baseado no tamanho da `amostra` a partir de conceitos estatísticos de significância de amostra.
     * Tratamento de tipos de dados e valores ausentes (`NaN`/`NA` convertidos para `None`) para compatibilidade com SQL Server.
 * **Carga (Load):** Carregamento dos dados transformados em um banco de dados SQL Server:
-    * Conexão segura utilizando [pyodbc](https://github.com/mkleehammer/pyodbc) e gerenciamento de credenciais via arquivo `.env` e `python-dotenv`.
+    * Conexão segura utilizando `pyodbc` e gerenciamento de credenciais via arquivo `.env` e `python-dotenv`.
     * Criação idempotente da tabela de destino (`CREATE TABLE IF NOT EXISTS` via checagem `OBJECT_ID`) com esquema definido.
-    * Estratégia de carga **Append Only** (apenas `INSERT`) para manter o histórico completo das coletas.
     * Inserção eficiente em lote usando `cursor.executemany()`.
-    * Controle explícito de transações (`conn.commit()`, `conn.rollback()`).
-* **(Opcional) Visualização:** Disponibilização dos dados para análise em ferramentas como Power BI, potencialmente utilizando uma View SQL (`vw_NotebooksAtuais`) para consultar apenas o estado mais recente de cada produto.
+    * Controle explícito de transações (`conn.commit()`).
+* **(Opcional) Visualização:** Disponibilização dos dados para análise em ferramentas como Power BI
 
 ## Arquitetura e Fluxo de Dados
 
 O projeto segue um fluxo ETL padrão:
 
-1.  **Fonte:** Páginas de resultados de busca e/ou páginas de produto no site Mercado Livre Brasil.
-2.  **Extração:** O script `src/extract.py` (utilizando Scrapy) navega pelo site, coleta os dados brutos dos anúncios de notebooks e salva-os em arquivos JSON na pasta `data/raw/`. *Justificativa: Salvar em JSON primeiro desacopla a extração (que pode falhar devido a bloqueios ou mudanças no site) das etapas seguintes.*
-3.  **Transformação:** O script `src/transform.py` lê os arquivos JSON, carrega os dados em um DataFrame Pandas, realiza a limpeza, calcula as novas colunas (`discount`, categorias, etc.) e prepara os dados no formato final. *Justificativa: Pandas oferece grande flexibilidade e poder para manipulação e análise de dados tabulares.*
-4.  **Carga:** O script `src/load.py` conecta-se ao SQL Server usando `pyodbc` e `python-dotenv` para as credenciais. Ele garante que a tabela de destino exista (criando-a na primeira execução) e então insere os dados transformados do DataFrame em lote (`executemany`) usando a estratégia Append Only. *Justificativa: SQL Server provê armazenamento relacional robusto. Append Only foi escolhido para preservar o histórico para análise temporal, com a visão do "estado atual" sendo tratada posteriormente (via View ou Power BI).*
-5.  **Análise (Externa):** Ferramentas como Power BI podem se conectar diretamente à tabela SQL Server (para histórico) ou a uma View (`vw_NotebooksAtuais`, se criada) para análises e visualizações.
+1.  **Fonte:** Páginas de resultados de busca no site Mercado Livre Brasil.
+2.  **Extração:** O script `notebook.py` (utilizando Scrapy) navega pelo site, coleta os dados brutos dos anúncios de notebooks e salva-os em arquivos JSON na pasta `data/`. *Justificativa: Salvar em JSON primeiro desacopla a extração (que pode falhar devido a bloqueios ou mudanças no site) das etapas seguintes.*
+3.  **Transformação:** O script `main.py` lê os arquivos JSON, carrega os dados em um DataFrame Pandas, realiza a limpeza, calcula as novas colunas (`discount`, categorias, etc.) e prepara os dados no formato final. *Justificativa: Pandas oferece grande flexibilidade e poder para manipulação e análise de dados tabulares.*
+4.  **Carga:** O script conecta-se ao SQL Server usando `pyodbc` e `python-dotenv` para as credenciais. Ele garante que a tabela de destino exista (criando-a na primeira execução) e então insere os dados transformados do DataFrame em lote (`executemany`). *Justificativa: SQL Server provê armazenamento relacional robusto.
+5.  **Análise (Externa):** Ferramentas como Power BI podem se conectar diretamente à tabela SQL Server para criar visuais interativos e personalizados.
 
 ## Tecnologias Utilizadas
 
@@ -51,19 +48,17 @@ O projeto segue um fluxo ETL padrão:
 * **Conexão BD Python:** pyodbc
 * **Gerenciamento de Configuração:** python-dotenv (`.env`)
 * **Controle de Versão:** Git, GitHub
-* **Visualização (Exemplo):** Power BI
+* **Visualização:** Power BI
 
 ## Desafios Enfrentados e Soluções
 
 Este projeto apresentou oportunidades valiosas de aprendizado através da resolução de desafios técnicos comuns em ETL:
 
-* **Desafio:** Garantir a extração de um **identificador único e estável** para cada anúncio, visto que URLs podem mudar.
-    * **Solução:** Optou-se por extrair e utilizar o ID do Anúncio (`MLB-xxxxx`) presente [diga onde encontrou: na URL canônica / em atributo data-id do HTML], por ser mais resiliente a mudanças que a URL completa. *(Adapte se usou outra estratégia)*.
 * **Desafio:** Lidar com **erros de conexão SSL (08001)** ao conectar ao SQL Server local com `pyodbc` e drivers recentes.
     * **Solução:** Diagnosticado como um problema de certificado autoassinado não confiável pelo cliente. Resolvido adicionando o parâmetro `Encrypt='no'` à string de conexão para o ambiente de desenvolvimento, ciente das implicações de segurança em redes não confiáveis. *(Ou `TrustServerCertificate='yes'` se foi o caso)*.
 * **Desafio:** Assegurar o **gerenciamento seguro das credenciais** do banco de dados ao compartilhar o código no GitHub.
     * **Solução:** Implementado o uso de arquivo `.env` para armazenar as credenciais localmente, carregando-as no script via `python-dotenv`. O arquivo `.env` foi adicionado ao `.gitignore` para prevenir commits acidentais. Um arquivo `.env.example` foi criado como template.
-* **Desafio:** Tornar o script de carga **re-executável (idempotente)** sem falhar ao tentar criar uma tabela já existente.
+* **Desafio:** Tornar o script de carga **re-executável** sem falhar ao tentar criar uma tabela já existente.
     * **Solução:** Implementada uma verificação prévia usando `SELECT OBJECT_ID(...)` para executar o `CREATE TABLE` somente se a tabela não for encontrada.
 * **Desafio:** Inserir eficientemente um **grande volume de dados** do DataFrame no SQL Server.
     * **Solução:** Utilizado o método `cursor.executemany()` em vez de loops com `cursor.execute()`, preparando os dados como uma lista de tuplas para otimização da inserção em lote.
