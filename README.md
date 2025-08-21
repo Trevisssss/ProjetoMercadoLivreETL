@@ -6,6 +6,8 @@ Este projeto implementa um pipeline ETL (Extract, Transform, Load) ponta a ponta
 
 Este repositório demonstra práticas de web scraping, manipulação de dados com Pandas, interação segura com banco de dados relacional usando pyodbc, gerenciamento de configuração e versionamento com Git.
 
+Link do Painel de Acesso Público: [Link](https://app.powerbi.com/view?r=eyJrIjoiMzFiOTA2MmMtZjg1Ny00Y2VjLTk1MDUtYmJkY2YyZWFjMGQ2IiwidCI6ImIzYWUzNDliLThjZTktNDc2Yi05ZWJlLTY1Y2NhNzdlZDA4ZiJ9)
+
 ## Funcionalidades Principais
 
 * **Extração (Extract):** Coleta automatizada de dados de anúncios de notebooks via [Scrapy](https://scrapy.org/), extraindo informações como:
@@ -43,10 +45,10 @@ O projeto segue um fluxo ETL padrão:
 
 Este projeto faz uso das seguintes tecnologias:
 
-* **Linguagem:** `` `Python 3.13` ``
+* **Linguagem:** `` `Python 3.12.1` ``
 * **Web Scraping:** `` `Scrapy` ``
 * **Manipulação de Dados:** `` `Pandas` ``, `` `NumPy` ``
-* **Banco de Dados:** Microsoft `` `SQL Server` ``
+* **Banco de Dados:** Microsoft `` `SQL Server On-Premisses (localhost)` ``
 * **Conexão BD Python:** `` `pyodbc` ``
 * **Gerenciamento de Configuração:** `` `python-dotenv` `` (com arquivo `` `.env` ``)
 * **Controle de Versão:** `` `Git` ``, `` `GitHub` ``
@@ -78,21 +80,6 @@ Do total de 764 produtos, 27% representam a marca dell, ou seja, dentro do merca
 Filtrando a marca DELL no primeiro visual, é possível identificar que boa parte dos anúncios da marca não possuem uma avaliação (69%). O que impacta e muito na confiabilidade do anunciante, mas não necessariamente do produto, ainda assim afetará a decisão da compra do produto.
 
 Essa marca em sí se econtra posicionada com maior parte dos produtos estando entre 1500 e 3500 reais, provavelmente notebooks custo benefício, o que faz sentido, pois é onde normalmente o público geral fará sua escolha baseado em um uso não exigente.
-
-### Próximos passos
-
-Após essa análise inicial, algumas perguntas foram respondidas, mas outras foram criadas, exigindo uma investigação mais profunda, como:
-
-* Quais são os fatores que levam a um produto não ter nenhuma avaliação (quase 70% no caso da DELL)? Pode ser o tempo de listagem, a popularidade do produto, a plataforma de venda, etc.
-
-* Como a distribuição de preços dos produtos DELL se compara com a distribuição de preços de outras marcas, como LENOVO ou ASUS, que têm uma quantidade similar de produtos? A análise atual só mostra a distribuição da DELL.
-
-* O alto percentual de anúncios sem avaliação para a DELL é comum no mercado, ou é algo específico dessa marca ou desse conjunto de dados? Comparar esse percentual com o de outras marcas seria interessante.
-
-
-<br><br><br>
-`Esse projeto foi um exemplo prático de como uma análise exploratória pode responder perguntas pontuais, ao mesmo tempo que nos leva a raciocínios mais profundos, tentando entender a causa-efeito dos números que estamos vendo.`
-<br><br><br><br>
 
 _Overview do Painel:_
 ![Análises de Presença de Mercado](Dashboard-Overview.png)
