@@ -11,6 +11,7 @@ load_dotenv()
 # # --- 1. Lendo o arquivo JSONL e configurando o DataFrame ---
 pd.options.display.max_columns = None
 JSON_FOLDER_PATH = os.environ.get("JSON_FOLDER_PATH")
+#print(JSON_FOLDER_PATH)
 notebook_data = pd.read_json(JSON_FOLDER_PATH, lines=True)
 
 #Adicionar a hora da extração/transformação
