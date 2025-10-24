@@ -1,4 +1,4 @@
-# Projeto ETL - Coleta e Análise de Dados de Notebooks no Mercado Livre
+# Estudo de Mercado de Notebooks na Plataforma Mercado Livre
 
 ## Descrição
 
